@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class catalog="sappbussiness" name="com.modelo.Stock" table="stock">
+  <id name="stockId" type="java.lang.Long">
+   <column name="STOCK_ID"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="stockCode" type="string">
+   <column length="10" name="STOCK_CODE" not-null="true" unique="true"/>
+  </property>
+  <property generated="never" lazy="false" name="stockName" type="string">
+   <column length="20" name="STOCK_NAME" not-null="true" unique="true"/>
+  </property>
+ </class>
+ <class name="com.modelo.Sappentidad" table="sappentidad">
+  <id name="idsaapentidad" type="java.lang.Long">
+   <column name="idsaapentidad"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="sappnombres" type="string">
+   <column name="sappnombres"/>
+  </property>
+  <property generated="never" lazy="false" name="saapapellidos" type="string">
+   <column name="saapapellidos"/>
+  </property>
+  <property name="sapptipodocumento" type="string">
+   <column name="sapptipodocumento"/>
+  </property>
+  <property name="sappnumerodocumento" type="string">
+   <column name="sappnumerodocumento"/>
+  </property>
+  <property name="sappciudadania" type="string">
+   <column name="sappciudadania"/>
+  </property>
+  <property name="sappfechanacimiento" type="date">
+   <column name="sappfechanacimiento"/>
+  </property>
+  <property name="sappentidadestatus" type="string">
+   <column name="sappentidadestatus"/>
+  </property>
+ </class>
+</hibernate-mapping>

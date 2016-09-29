@@ -1,0 +1,6 @@
+com/modelo/Stock.class
+com/model/bo/StockBo.class
+com/dao/impl/StockDaoImpl.class
+com/dao/StockDao.class
+datalayerora/Main.class
+com/model/bo/impl/StockBoImpl.class
